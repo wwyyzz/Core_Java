@@ -30,7 +30,9 @@ class DrawFrame extends JFrame
 {
     public DrawFrame()
     {
-        add(new DrawComponent());
+        DrawComponent p = new DrawComponent();
+        p.setBackground(Color.CYAN);
+        add(p);
         pack();
     }
 }
@@ -39,6 +41,7 @@ class DrawComponent extends JComponent
 {
     public static final int DEFAULT_WIDTH = 400;
     public static final int DEFAULT_HEIGHT = 400;
+
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -55,7 +58,11 @@ class DrawComponent extends JComponent
         Ellipse2D ellipse = new Ellipse2D.Double();
         ellipse.setFrame(rect);
         g2.draw(ellipse);
+        g2.setPaint(Color.red);
+        g2.fill(ellipse);
 
+
+        g2.setPaint(Color.blue);
         g2.draw(new Line2D.Double(leftX, topY, leftX + width, topY + height));
 
         double centerX = rect.getCenterX();
@@ -65,6 +72,7 @@ class DrawComponent extends JComponent
         Ellipse2D circle = new Ellipse2D.Double();
         circle.setFrameFromCenter(centerX, centerY, centerX + radius, centerY + radius);
         g2.draw(circle);
+
     }
 
     public Dimension getPreferredSize() {
