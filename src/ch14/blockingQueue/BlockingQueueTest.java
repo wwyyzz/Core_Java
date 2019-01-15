@@ -15,7 +15,7 @@ public class BlockingQueueTest {
     public static void main(String[] args) {
         try(Scanner in = new Scanner(System.in))
         {
-            System.out.println("Enter base directionatry(eg /opt/jdk/src):");
+            System.out.println("Enter base directionatry(eg /usr/jdk1.8.0_131):");
             String directory = in.nextLine();
             System.out.println("Enter keyword(e.g. volatile): ");
             String keyword = in.nextLine();
