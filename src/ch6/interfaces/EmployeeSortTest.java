@@ -13,7 +13,14 @@ public class EmployeeSortTest {
 
 //        Arrays.sort(staff);
         Comparator comp = new LengthComparator();
-        Arrays.sort(staff, comp);
+//        Arrays.sort(staff, comp);
+
+//        lambda sort
+
+//        Arrays.sort(staff, Comparator.comparing(Employee::getName));
+        Arrays.sort(staff, Comparator.comparing(Employee::getSalary));
+
+
 
         for (Employee e :staff)
         {
