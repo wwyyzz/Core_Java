@@ -81,7 +81,6 @@ public class MouseComponent extends JComponent {
         {
             current = find(event.getPoint());
             if (current != null && event.getClickCount() >= 2) remove(current);
-
         }
     }
 
