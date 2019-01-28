@@ -1,10 +1,10 @@
-package ch12;
+package v2.ch1;
 
 /**
  * @program: Core_Java
- * @description: a
+ * @description:
  * @author: Jun Wang
- * @create: 2019-01-21 16:18
+ * @create: 2019-01-28 09:55
  */
 public class a {
 }
