@@ -1,8 +1,6 @@
-package v2.ch2.tutorial;
+package tutorial.BasicIO.IOStream;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * @program: Core_Java
@@ -10,15 +8,15 @@ import java.io.IOException;
  * @author: Jun Wang
  * @create: 2019-02-01 09:25
  */
-public class CopyCharacters {
+public class CopyCharacterswithBuffer {
     public static void main(String[] args) throws IOException {
-        FileReader in = null;
-        FileWriter out = null;
+        BufferedReader in = null;
+        BufferedWriter out = null;
 
         try{
-            in = new FileReader("src/v2/ch2/tutorial/xanadu.txt");
+            in = new BufferedReader(new FileReader("src/v2/ch2/tutorial/xanadu.txt"));
 //            in = new FileReader("src/v2/ch2/tutorial/employee.dat");
-            out = new FileWriter("src/v2/ch2/tutorial/characteroutput.txt");
+            out = new BufferedWriter(new FileWriter("src/v2/ch2/tutorial/characteroutputwithbuffer.txt"));
 
             int c;
 
@@ -35,5 +33,6 @@ public class CopyCharacters {
                 out.close();
             }
         }
+
     }
 }

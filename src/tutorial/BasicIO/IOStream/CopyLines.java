@@ -1,4 +1,4 @@
-package v2.ch2.tutorial;
+package tutorial.BasicIO.IOStream;
 
 import java.io.*;
 
