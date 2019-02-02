@@ -25,6 +25,7 @@ public class RegexTest {
             String input = in.nextLine();
             if (input == null || input.equals("")) return;
             Matcher matcher = pattern.matcher(input);
+
             if (matcher.matches())
             {
                 System.out.println("Match");
