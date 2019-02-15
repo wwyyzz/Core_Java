@@ -25,7 +25,7 @@ public class mailTest {
             props.load(in);
         }
 
-        List<String> lines = Files.readAllLines(Paths.get(args[0]), Charset.forName("UTF-8")));
+        List<String> lines = Files.readAllLines(Paths.get(args[0]), Charset.forName("UTF-8"));
 
         String from = lines.get(0);
         String to = lines.get(1);
